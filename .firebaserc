@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tradesman-app": {
+      "hosting": {
+        "tradesman-app": [
+          "tradesman-app"
+        ]
+      }
+    }
+  }
+}

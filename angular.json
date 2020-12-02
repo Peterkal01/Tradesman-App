@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Tradesman-app": {
+    "tradesman-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Tradesman-app",
+            "outputPath": "dist/tradesman-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -61,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Tradesman-app:build"
+            "browserTarget": "tradesman-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Tradesman-app:build:production"
+              "browserTarget": "tradesman-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Tradesman-app:build"
+            "browserTarget": "tradesman-app:build"
           }
         },
         "test": {
@@ -109,16 +109,20 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Tradesman-app:serve"
+            "devServerTarget": "tradesman-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Tradesman-app:serve:production"
+              "devServerTarget": "tradesman-app:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }
   },
-  "defaultProject": "Tradesman-app"
+  "defaultProject": "tradesman-app"
 }
